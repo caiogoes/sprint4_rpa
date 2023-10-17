@@ -1,0 +1,977 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="680,30924" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugade="clr-namespace:UiPath.GSuite.Activities.Drive.Enums;assembly=UiPath.GSuite.Activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.GSuite.Activities.Drive.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.GSuite.Drive.Models</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.GSuite.Activities.Sheets.Enums</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.GSuite.Activities.Sheets</x:String>
+      <x:String>UiPath.GSuite.Activities.Contracts</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="546,30859" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="gs_cqi_2" />
+      <Variable x:TypeArguments="x:String" Name="md_cqi_2" />
+      <Variable x:TypeArguments="x:String" Name="cp_gan_1" />
+      <Variable x:TypeArguments="x:String" Name="cp_gan_2" />
+      <Variable x:TypeArguments="x:String" Name="gs_gan_1" />
+      <Variable x:TypeArguments="x:String" Name="gs_gan_2" />
+      <Variable x:TypeArguments="x:String" Name="md_gan_1" />
+      <Variable x:TypeArguments="x:String" Name="md_gan_2" />
+      <Variable x:TypeArguments="x:String" Name="cp_gib_1" />
+      <Variable x:TypeArguments="x:String" Name="cp_gib_2" />
+      <Variable x:TypeArguments="x:String" Name="gs_gib_1" />
+      <Variable x:TypeArguments="x:String" Name="gs_gib_2" />
+      <Variable x:TypeArguments="x:String" Name="md_gib_1" />
+      <Variable x:TypeArguments="x:String" Name="md_gib_2" />
+      <Variable x:TypeArguments="x:String" Name="cp_pce_1" />
+      <Variable x:TypeArguments="x:String" Name="cp_pce_2" />
+      <Variable x:TypeArguments="x:String" Name="gs_pce_1" />
+      <Variable x:TypeArguments="x:String" Name="gs_pce_2" />
+      <Variable x:TypeArguments="x:String" Name="md_pce_1" />
+      <Variable x:TypeArguments="x:String" Name="md_pce_2" />
+      <Variable x:TypeArguments="x:String" Name="cp_nlp_1" />
+      <Variable x:TypeArguments="x:String" Name="cp_nlp_2" />
+      <Variable x:TypeArguments="x:String" Name="gs_nlp_1" />
+      <Variable x:TypeArguments="x:String" Name="gs_nlp_2" />
+      <Variable x:TypeArguments="x:String" Name="md_nlp_1" />
+      <Variable x:TypeArguments="x:String" Name="md_nlp_2" />
+      <Variable x:TypeArguments="x:String" Name="cp_vco_1" />
+      <Variable x:TypeArguments="x:String" Name="cp_vco_2" />
+      <Variable x:TypeArguments="x:String" Name="gs_vco_1" />
+      <Variable x:TypeArguments="x:String" Name="gs_vco_2" />
+      <Variable x:TypeArguments="x:String" Name="md_vco_1" />
+      <Variable x:TypeArguments="x:String" Name="md_vco_2" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Novo separador" sap:VirtualizedContainerService.HintSize="484,30748" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" IsCVEnabled="False" ScopeGuid="abef7573-cf57-4d8e-aa13-b0ab046cccce" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="450,30530" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="cp_rpa_1" />
+              <Variable x:TypeArguments="x:String" Name="gs_rpa_1" />
+              <Variable x:TypeArguments="x:String" Name="md_rpa_1" />
+              <Variable x:TypeArguments="x:String" Name="cp_rpa_2" />
+              <Variable x:TypeArguments="x:String" Name="gs_rpa_2" />
+              <Variable x:TypeArguments="x:String" Name="md_rpa_2" />
+              <Variable x:TypeArguments="x:String" Name="cp_aml_1" />
+              <Variable x:TypeArguments="x:String" Name="gs_aml_1" />
+              <Variable x:TypeArguments="x:String" Name="md_aml_1" />
+              <Variable x:TypeArguments="x:String" Name="cp_aml_2" />
+              <Variable x:TypeArguments="x:String" Name="gs_aml_2" />
+              <Variable x:TypeArguments="x:String" Name="md_aml_2" />
+              <Variable x:TypeArguments="x:String" Name="cp_cns_1" />
+              <Variable x:TypeArguments="x:String" Name="gs_cns_1" />
+              <Variable x:TypeArguments="x:String" Name="md_cns_1" />
+              <Variable x:TypeArguments="x:String" Name="cp_cns_2" />
+              <Variable x:TypeArguments="x:String" Name="gs_cns_2" />
+              <Variable x:TypeArguments="x:String" Name="md_cns_2" />
+              <Variable x:TypeArguments="x:String" Name="cp_cqi_1" />
+              <Variable x:TypeArguments="x:String" Name="gs_cqi_1" />
+              <Variable x:TypeArguments="x:String" Name="md_cqi_1" />
+              <Variable x:TypeArguments="x:String" Name="cp_cqi_2" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'editable text'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,219" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="HardwareEvents" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" Text="https://www2.fiap.com.br/[k(Enter)]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="182, 48, 984, 30" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'editable text'" FullSelectorArgument="&lt;ctrl name='Novo separador – Utilização de memória – 62,1 MB - Google Chrome' role='pane' /&gt;&lt;ctrl name='Barra de pesquisa e endereço' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Novo separador – Utilização de memória – 62,1 MB - Google Chrome' role='pane' /&gt;&lt;ctrl name='Barra de pesquisa e endereço' role='editable text' automationid='' /&gt;" Guid="215b5280-ec81-4923-b900-2db7602012f9" InformativeScreenshot="d4233574fdcb98f760defd9c7e4dc63f.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Novo separador - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="388,91" sap2010:WorkflowViewState.IdRef="Delay_2" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Conectar'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/" DesignTimeRectangle="536, 437, 310, 50" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Conectar'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='a-login-btn' aaname='Conectar' check:text='Conectar' /&gt;" Guid="1e08bc25-ced7-4144-894e-fe90136174df" InformativeScreenshot="e245234eb6516c589af72f314b4be950.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="388,91" sap2010:WorkflowViewState.IdRef="Delay_4" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Boletim'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Home" DesignTimeRectangle="376, 179, 60, 60" DesignTimeScaleFactor="1" ElementType="Icon" FriendlyName="'SVG'" FullSelectorArgument="&lt;webctrl idx='6' parentid='aulas' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='aulas' tag='svg' class='l-servico-media-img' aaname='' /&gt;" Guid="9aca7e5c-3e12-4090-9c64-55bb4221c006" InformativeScreenshot="cc97c55da214014ca4657329322dbc7f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="378, 260, 56, 16" ElementType="Text" FriendlyName="'Boletim'" FullSelectorArgument="&lt;webctrl aaname=' Boletim ' class='l-servico-title-text' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Boletim ' class='l-servico-title-text' tag='SPAN' type='' check:innerText='BOLETIM' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NGetText DisplayName="Get Text '55'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[cp_rpa_1]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="426, 237, 73, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'55'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='2' tableRow='3' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='td-more js-nacs-open' tag='TD' /&gt;" Guid="e68715ce-522d-4675-b610-5ae0a5987686" ImageBase64="" InformativeScreenshot="c0ec639e04b65447adf478d12036d0b4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '35'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[gs_rpa_1]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="501, 220, 56, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'35'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='3' tableRow='3' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='TD' /&gt;" Guid="6f014884-bf68-471f-ac7f-226b7c594016" ImageBase64="" InformativeScreenshot="a963407789874075870e0cd3e8ae7d42.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '43'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[md_rpa_1]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="604, 240, 62, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'43'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='5' tableRow='3' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='TD' /&gt;" Guid="46fe6d0f-0e1c-4f7c-a459-e74e53f8dfe0" ImageBase64="" InformativeScreenshot="f026f960d6192a0c75881efc677982b4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '-'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_6" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[cp_rpa_2]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="668, 240, 38, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'-'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='6' tableRow='3' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='td-more js-nacs-open remover' tag='TD' /&gt;" Guid="4d375bc5-c50f-4973-9aaa-87b55f1be9e5" ImageBase64="" InformativeScreenshot="8d701b8df2268471b73a1a469c5dc243.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '-'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_7" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[gs_rpa_2]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="707, 240, 38, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'-'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='7' tableRow='3' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='TD' /&gt;" Guid="f08ff754-e49b-4eb1-8116-faf632769c95" ImageBase64="" InformativeScreenshot="01f03ae3083f0962538cbd365a667049.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '-'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_8" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[md_rpa_2]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="796, 240, 42, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'-'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='9' tableRow='3' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='TD' /&gt;" Guid="e7fdca13-e652-45d6-baa3-4e4950d2f7d9" ImageBase64="" InformativeScreenshot="baef1ecb9ac0e999c180284304da736f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '90'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_9" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[cp_aml_1]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="426, 290, 73, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'90'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='2' tableRow='4' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='td-more js-nacs-open' tag='TD' /&gt;" Guid="fe2bc489-62b1-4715-96a2-98e52841f851" ImageBase64="" InformativeScreenshot="6ac3e96e17c9ba3fd95013f0210ca2d4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '80'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_10" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[gs_aml_1]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="501, 290, 56, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'80'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='3' tableRow='4' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='TD' /&gt;" Guid="ad462ab5-4478-4475-be8c-925ef95c748a" ImageBase64="" InformativeScreenshot="233944877d6f87b91f6faa23c5e8d164.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '84'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_11" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[md_aml_1]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="604, 290, 62, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'84'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='5' tableRow='4' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='TD' /&gt;" Guid="346e28bb-f1c1-4338-a68e-b42f8bbb3ef4" ImageBase64="" InformativeScreenshot="6fbc6084201ef1a9a4c293a10161a937.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '-'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_12" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[cp_aml_2]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="668, 290, 38, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'-'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='6' tableRow='4' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='td-more js-nacs-open remover' tag='TD' /&gt;" Guid="3f9b2289-8567-4a87-b651-bce9fb855c0c" ImageBase64="" InformativeScreenshot="e2892425624e8a0da896a39a0252dd3f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '-'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_13" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[gs_aml_2]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="707, 290, 38, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'-'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='7' tableRow='4' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='TD' /&gt;" Guid="b26053ce-b333-4e87-90fb-26078ec7179c" ImageBase64="" InformativeScreenshot="b10650c2ce3c959a5e9dcda56c1d3409.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '-'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_14" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[md_aml_2]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="796, 290, 42, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'-'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='9' tableRow='4' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='TD' /&gt;" Guid="e5075f0e-8829-4094-bdf1-14b3c00c4e10" ImageBase64="" InformativeScreenshot="fe3b01a200d23557f05b65b7479079e8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '82,5'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_15" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[cp_cns_1]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="426, 340, 73, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'82,5'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='2' tableRow='5' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='td-more js-nacs-open' tag='TD' /&gt;" Guid="e2736a3a-842f-4e41-822f-121051e2b993" ImageBase64="" InformativeScreenshot="31a6c65b534918b238354d67dbfe71c0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '40'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_16" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[gs_cns_1]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="501, 340, 56, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'40'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='3' tableRow='5' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='TD' /&gt;" Guid="0a744d33-9244-4708-8d4b-a09a7acea10a" ImageBase64="" InformativeScreenshot="647f645dad2211b923c9650de2295ae5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '57'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_17" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[md_cns_1]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="604, 340, 62, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'57'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='5' tableRow='5' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='TD' /&gt;" Guid="0128abc7-cc77-4a5c-93c5-8bae71606bff" ImageBase64="" InformativeScreenshot="e6463edf6e9fdd90c55fe1832e078ee8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '-'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_18" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[cp_cns_2]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="668, 340, 38, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'-'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='6' tableRow='5' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class=' remover' tag='TD' /&gt;" Guid="e9cfbfa5-a79d-4336-b858-a1c77bf9d022" ImageBase64="" InformativeScreenshot="c0921d375835c0aa26a29c06767267a7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '-'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_19" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[gs_cns_2]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="707, 340, 38, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'-'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='7' tableRow='5' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='TD' /&gt;" Guid="a75b62f8-9fc5-4203-bfdc-d2c1f3b3bff9" ImageBase64="" InformativeScreenshot="fa9e4b28597d489f45d22755ce11c254.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '-'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_20" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[md_cns_2]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="796, 340, 42, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'-'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='9' tableRow='5' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='TD' /&gt;" Guid="4c7ab39c-4d8f-4d35-8dd2-dee3574f2d24" ImageBase64="" InformativeScreenshot="eafde5994c38bc3eb701894a23adb5bc.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '92,5'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_21" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[cp_cqi_1]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="426, 390, 73, 32" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'92,5'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='2' tableRow='6' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='td-more js-nacs-open' tag='TD' /&gt;" Guid="aa330238-8357-4997-8a55-88625dbe7d74" ImageBase64="" InformativeScreenshot="212a963bc9ebff8721ae75b8d807ebc2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '100'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_22" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[gs_cqi_1]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="501, 390, 56, 32" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'100'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='3' tableRow='6' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='TD' /&gt;" Guid="d3a4179c-40d9-4628-adc1-ddc338a3b06f" ImageBase64="" InformativeScreenshot="f6784f37c4ccf08726204d011bb18e62.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '97'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_23" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[md_cqi_1]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="604, 390, 62, 32" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'97'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='5' tableRow='6' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='TD' /&gt;" Guid="ead9bab7-7177-4169-af06-ab31855fd3b5" ImageBase64="" InformativeScreenshot="5ebb51bfced7a6a035b0ca5133047acf.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '-'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_24" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[cp_cqi_2]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="668, 390, 38, 32" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'-'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='6' tableRow='6' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class=' remover' tag='TD' /&gt;" Guid="7c9d1e5a-edef-4c20-8b48-ca85894b4619" ImageBase64="" InformativeScreenshot="70c1a54ca7c0e2be46fc24045b1de7c6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '-'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_25" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[gs_cqi_2]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="707, 390, 38, 32" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'-'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='7' tableRow='6' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='TD' /&gt;" Guid="f3b6f902-c53d-4087-b851-7ffdd626e379" ImageBase64="" InformativeScreenshot="6b7b1cfdc54b68f3ea378bee29041928.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '-'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_26" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[md_cqi_2]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="796, 390, 42, 32" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'-'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='9' tableRow='6' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='TD' /&gt;" Guid="04baba7a-4df6-4c08-bde4-561d3ffcbdef" ImageBase64="" InformativeScreenshot="5672b6fbfb64b44b421fcb4a48b32cc9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '100'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_27" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[cp_gan_1]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="426, 324, 73, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'100'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='2' tableRow='7' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='td-more js-nacs-open' tag='TD' /&gt;" Guid="e61e4db8-fc90-4227-ae64-62e6c82ec984" ImageBase64="" InformativeScreenshot="3679966800415220f2244890a32016d1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '100'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_28" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[gs_gan_1]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="501, 548, 56, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'100'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='3' tableRow='7' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='TD' /&gt;" Guid="0a64aa9e-68c6-4bd7-ba06-a36f4c8192e7" ImageBase64="" InformativeScreenshot="106c0b96a6bbe33730cac7d7930006de.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '100'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_29" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[md_gan_1]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="604, 548, 62, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'100'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='5' tableRow='7' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='TD' /&gt;" Guid="75067a2a-189d-461a-982c-e4de21ad264d" ImageBase64="" InformativeScreenshot="e64e8cdcf9af84fbd93e104e5a3cc1fc.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '-'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_30" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[cp_gan_2]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="668, 548, 38, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'-'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='6' tableRow='7' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class=' remover' tag='TD' /&gt;" Guid="7c5027a4-5120-4a2c-a87e-c837f25d2681" ImageBase64="" InformativeScreenshot="8b066143636df987f728cb2ab14bbf80.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '-'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_31" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[gs_gan_2]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="707, 548, 38, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'-'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='7' tableRow='7' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='TD' /&gt;" Guid="501ca923-29fa-4d3f-8d5e-0eb862696917" ImageBase64="" InformativeScreenshot="9556567ab73b568aacd8e7853e1419ee.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '-'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_32" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[md_gan_2]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="796, 548, 42, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'-'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='9' tableRow='7' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='TD' /&gt;" Guid="63e38b1a-36d1-47fd-b1ca-b222af4b59ea" ImageBase64="" InformativeScreenshot="5f95fd886d7b032b439bd2e86a2f9925.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '77,5'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_33" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[cp_gib_1]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="426, 398, 73, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'77,5'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='2' tableRow='8' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='td-more js-nacs-open' tag='TD' /&gt;" Guid="33b9dae4-176b-471b-90e4-7f8535ebb9fe" ImageBase64="" InformativeScreenshot="490e03a0803493958e4fc65da229b505.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '100'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_34" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[gs_gib_1]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="501, 398, 56, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'100'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='3' tableRow='8' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='TD' /&gt;" Guid="a9b7e434-622a-41c8-9ca6-383fce845f8f" ImageBase64="" InformativeScreenshot="2ac46f10e039cd5a1ef212c15abfea7d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '91'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_35" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[md_gib_1]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="604, 398, 62, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'91'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='5' tableRow='8' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='TD' /&gt;" Guid="7c72f6b6-ada3-4513-8e3a-e9d72f5a5cb6" ImageBase64="" InformativeScreenshot="142f128aae1cae5e6b682449a85425b1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '-'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_36" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[cp_gib_2]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="668, 398, 38, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'-'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='6' tableRow='8' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='td-more js-nacs-open remover' tag='TD' /&gt;" Guid="15fad562-3c48-4285-8e64-44954fba121c" ImageBase64="" InformativeScreenshot="3153631f3d9eae257c6a4a36f77ce91e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '-'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_37" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[gs_gib_2]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="707, 398, 38, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'-'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='7' tableRow='8' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='TD' /&gt;" Guid="ad1563cf-44c5-4489-9509-b7040bafaccb" ImageBase64="" InformativeScreenshot="4c64a6ed4f3c7e23ee7cdda3c1857d1f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '-'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_38" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[md_gib_2]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="796, 398, 42, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'-'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='9' tableRow='8' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='TD' /&gt;" Guid="167efae1-9430-410c-9204-a60ad00dbcba" ImageBase64="" InformativeScreenshot="8eb08cbdf5a5952b6217df587a96e59c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '88,75'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_39" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[cp_pce_1]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="426, 448, 73, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'88,75'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='2' tableRow='9' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='td-more js-nacs-open' tag='TD' /&gt;" Guid="775b4a4c-4f86-4296-8762-5f183b78040c" ImageBase64="" InformativeScreenshot="93674c35a017e5cfe9d5c25a07dbb5db.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '70'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_40" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[gs_pce_1]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="501, 448, 56, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'70'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='3' tableRow='9' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='TD' /&gt;" Guid="d406e96d-3324-4843-9e91-02da6df2856d" ImageBase64="" InformativeScreenshot="eea1dabe6b8ac321bdc734ea7864d91b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '77,5'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_41" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[md_pce_1]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="604, 448, 62, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'77,5'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='5' tableRow='9' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='TD' /&gt;" Guid="4850b85e-df4f-46b8-983f-e10a01544df5" ImageBase64="" InformativeScreenshot="f2fd6e59379a1de2873a1d925163a0ff.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '-'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_42" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[cp_pce_2]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="668, 448, 38, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'-'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='6' tableRow='9' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='td-more js-nacs-open remover' tag='TD' /&gt;" Guid="d49555cf-52ac-4895-96f5-90297ea1f04c" ImageBase64="" InformativeScreenshot="2178a5f63665314cc95db67d619d351b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '-'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_43" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[gs_pce_2]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="707, 448, 38, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'-'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='7' tableRow='9' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='TD' /&gt;" Guid="a40ee167-79d1-417e-a3c6-075e05d4ff71" ImageBase64="" InformativeScreenshot="f34f4e3059322754ba15195527e868d2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '-'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_44" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[md_pce_2]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="796, 448, 42, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'-'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='9' tableRow='9' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='TD' /&gt;" Guid="5ed14885-a91c-4ce7-b261-96180d408279" ImageBase64="" InformativeScreenshot="880a24959815e08df37b61208b721e4f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '90,25'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_45" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[cp_nlp_1]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="426, 498, 73, 64" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'90,25'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='2' tableRow='10' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='td-more js-nacs-open' tag='TD' /&gt;" Guid="deba8299-b4b7-456a-88da-14d2195d9665" ImageBase64="" InformativeScreenshot="576b549c644118a2545134ed238978a1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '73'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_46" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[gs_nlp_1]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="501, 498, 56, 64" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'73'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='3' tableRow='10' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='TD' /&gt;" Guid="6473a288-eee4-4503-8847-2b0179446727" ImageBase64="" InformativeScreenshot="bb7772720d8de544f64cede49cd8a515.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '79,9'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_47" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[md_nlp_1]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="604, 498, 62, 64" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'79,9'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='5' tableRow='10' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='TD' /&gt;" Guid="ebfba7bf-3491-4509-bbd8-360c439b7010" ImageBase64="" InformativeScreenshot="3c05229e1e89a2160ae3f5d35a90953d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '-'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_48" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[cp_nlp_2]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="668, 498, 38, 64" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'-'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='6' tableRow='10' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class=' remover' tag='TD' /&gt;" Guid="2da72abc-8ec1-419d-b006-825fbc2c9d29" ImageBase64="" InformativeScreenshot="6df079ae65ed191844215fd65b8e6715.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '-'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_49" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[gs_nlp_2]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="707, 498, 38, 64" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'-'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='7' tableRow='10' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='TD' /&gt;" Guid="7d0a25ee-8f97-4ec4-b1f1-85197e18531b" ImageBase64="" InformativeScreenshot="65ed84a6c5a857e98dcfc78166b8a19f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '-'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_50" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[md_nlp_2]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="796, 498, 42, 64" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'-'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='9' tableRow='10' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='TD' /&gt;" Guid="16b625b8-894b-419b-879a-7d06924e590f" ImageBase64="" InformativeScreenshot="51fea1addce3feab183503a712505241.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '100'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_51" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[cp_vco_1]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="426, 564, 73, 32" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'100'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='2' tableRow='11' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='td-more js-nacs-open' tag='TD' /&gt;" Guid="caf13be5-9635-4141-ac22-ed9fb0df672f" ImageBase64="" InformativeScreenshot="31df7553bfea087591673315ddf8fcf4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '95'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_52" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[gs_vco_1]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="501, 564, 56, 32" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'95'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='3' tableRow='11' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='TD' /&gt;" Guid="ff709edb-c630-4577-9bca-9cdacf1cf805" ImageBase64="" InformativeScreenshot="a69d44dc1b56f3dfb23f91073fd5214b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '97'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_53" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[md_vco_1]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="604, 564, 62, 32" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'97'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='5' tableRow='11' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='TD' /&gt;" Guid="350b70b1-2433-4d31-976a-154a33f2d44d" ImageBase64="" InformativeScreenshot="3e12d7d009dbd42834986b9aa4187056.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '-'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_54" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[cp_vco_2]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="668, 564, 38, 32" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'-'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='6' tableRow='11' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class=' remover' tag='TD' /&gt;" Guid="39993b14-eb6d-4c49-9c90-ed23a521da2d" ImageBase64="" InformativeScreenshot="6dbe15c5be1052b11d2569051c77abb0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '-'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_55" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[gs_vco_2]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="707, 564, 38, 32" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'-'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='7' tableRow='11' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='TD' /&gt;" Guid="41a14c28-cd3b-4346-85b8-2944ce089b7b" ImageBase64="" InformativeScreenshot="a1184bd2877340e6e84e616731ff4c77.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '-'" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NGetText_56" ScopeIdentifier="abef7573-cf57-4d8e-aa13-b0ab046cccce" TextString="[md_vco_2]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.fiap.com.br/Aluno/Boletim" DesignTimeRectangle="796, 564, 42, 32" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'-'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='9' tableRow='11' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='TD' /&gt;" Guid="a7e9aa4a-d4a8-4612-afb0-c882cbf25177" ImageBase64="" InformativeScreenshot="d513ffe259e3fba9bccc20e3dc600a2a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal do Aluno - FIAP' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="B3" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_1" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[cp_rpa_1]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="C3" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_2" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[gs_rpa_1]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="D3" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_3" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[md_rpa_1]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="E3" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_4" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[cp_rpa_2]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="F3" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_5" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[gs_rpa_2]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="G3" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_6" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[md_rpa_2]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="B4" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_7" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[cp_aml_1]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="C4" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_8" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[gs_aml_1]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="D4" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_9" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[md_aml_1]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="E4" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_10" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[cp_aml_2]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="F4" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_11" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[gs_aml_2]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="G4" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_12" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[md_aml_2]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="B5" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_13" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[cp_cns_1]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="C5" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_14" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[gs_cns_1]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="D5" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_15" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[md_cns_1]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="E5" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_16" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[cp_cns_2]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="F5" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_17" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[gs_cns_2]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="G5" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_18" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[md_cns_2]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="B6" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_19" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[cp_cqi_1]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="C6" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_20" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[gs_cqi_1]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="D6" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_21" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[md_cqi_1]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="E6" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_22" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[cp_cqi_2]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="F6" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_23" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[gs_cqi_2]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="G6" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_24" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[md_cqi_2]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="B7" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_25" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[cp_gan_1]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="C7" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_26" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[gs_gan_1]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="D7" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_27" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[md_gan_1]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="E7" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_28" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[cp_gan_2]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="F7" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_29" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[gs_gan_2]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="G7" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_30" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[md_gan_2]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="B8" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_31" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[cp_gib_1]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="C8" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_32" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[gs_gib_1]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="D8" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_33" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[md_gib_1]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="E8" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_34" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[cp_gib_2]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="F8" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_35" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[gs_gib_2]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="G8" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_36" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[md_gib_2]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="B9" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_37" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[cp_pce_1]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="C9" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_38" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[gs_pce_1]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="D9" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_39" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[md_pce_1]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="E9" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_40" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[cp_pce_2]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="F9" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_41" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[gs_pce_2]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="G9" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_42" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[md_pce_2]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="B10" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_43" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[cp_nlp_1]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="C10" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_44" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[gs_nlp_1]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="D10" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_45" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[md_nlp_1]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="E10" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_46" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[cp_nlp_2]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="F10" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_47" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[gs_nlp_2]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="G10" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_48" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[md_nlp_2]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="B11" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_49" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[cp_vco_1]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="C11" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_50" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[gs_vco_1]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="D11" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_51" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[md_vco_1]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="E11" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_52" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[cp_vco_2]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="F11" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_53" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[gs_vco_2]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="NOTAS_1SEM_2TIAR" BrowserItemId="13UnS3oIZtZYbjCQt5iOc1EVgCJNKANEd6fhNYN3adug" Cell="G11" ConnectionId="133292c1-39a5-449f-baf2-aad3cbec655e" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="388,309" sap2010:WorkflowViewState.IdRef="WriteCellConnections_54" ItemSelectionMode="Browse" RangeLocation="Página1" UseConnectionService="True" WhatToWrite="[md_vco_2]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+            </uga:WriteCellConnections>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 744" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAbxSURBVFhHpZZtTFvnFcf9pWuypg3tmjVrGmLeEoMBG2PaJBDb2CkvyQJpvlXtFqRpmrSXT5s67a3pl0nTptXkhdAklEsCbZdG3VsrVe3AhhBCs3ZDi5ZAo21OA5hAOztNmrXhXj9n//M8j415SUe7I/30P+fh+vzPufcasC03YgF3zkzQ0zITrDLAyPshb3ImVEXTQS/NBDn3RmeClcZ0qHIvX6s/9v/HVIPbfjVU1com2kxcra2k6VovqBQM14sIVBpTAbddt/nsoTb2htlUGgWUWcYQ9dWAR0wFOPcgV8r1VMCj8AOfZ59uufzgyWES00a6sUfm8ww0cTZiuPZViLi/Qp1xrohNbV7m3ZiurXChUSzbIIO/QjDKUBlpE4r73BmdhE5ucys4V/X/HoI3h1EsvYFSjTaa9Kmm8W3aSDXPMJGmxkWTNS4BBaoer3ZhCMfSQ/Azh1FMGWU1z5ipxnIA1hq3kDUbaENlJHMxLmul49XljFDqii35LZnwucMZE4XI3khvo41Uzg1lzc1l7aIrOGO0KV3ZupAycWVLWVjbqnC/tNve/h3/nAmboqk2I7mNNpn57jfoxss9ZMYnKR3i5rskZl4la2QXWecqGcGaYn3LQ5JzHpx5BM5kTcNZ70PlS3uMbUYzjYUq1Fb6dknFxDKvr6YbJ3u0JVE8Kah/bBaYdGkqpU8xzNSLZL3jJ/OtChgxbgzhxjDQYbeqoajVXXAbu3M8LzxGzL4fBjO3io1Z39tSRuN1W+nWpTFp8JeYSd8yPqKqZ65R1T4N8qbwdYqOzsprxM0xst6ugZmLDZUOc85aDi3HEOVJGsG74H5hd4u7ZzdVANb+Jq80ZfCsBOv133TLxkein5AXhhmezso1R3ENh4h3K7PhMk1pljJOMXumpMXm7m42ALm6m4S7p1k8+Ys6ury5lN7b7BTMxGP1siFvV/l0UuLROse1eefv4C5xpC7sFdZZJ5lnS8hagtRwiWFzdTdHXScwwIkmTTO9useLIZwUe8RJN177nWy289kPqeJnyTlglNF0rutvdt6QnxFTJ4R5thhm2TgwlINS0NRQ8Yit/HhTsvz4LkpT1rWLth9spL/7yij2cIm4dWmUxuIWudF8MYnbkKTJJF7MTyZguBGGmiEJMSZInS1K2MqMr8JUImSu659/u5piVcWCN4lcnCXXTxNLA7P5dYLKoRH9QlpDRWSeKSSLQW4NaZV1gbCVdu6kUpiWGjuF1C6lj7Q30vkap2zSd/EWlaHpQtgoW7PP+zA0h3WmAEb5wjoDhgowTD7O5uABks7OHUKxk6BAqvjeUz5hxidoMpGi0p/8+zMxiscmProAkzwyB/Ogdgxhl7XKN3CdsJU8v+OvJR2NpNhBqGXuZH2+UQz2n5SbtHRcJycaO38MWD+Ful9dk59JTZ+CGRvlCnMwlyzJBrBecG4Oro/aHB0NRvGxRpqjQQ7gONYgOP/6a0/JZn/+1yyVwLwYKP1A5nP13HkvHhmH9fYWMk+vBw/B9CHBqnOyWE+vM2yOow0tIGPIyPpovQCsdPy8+ioe6rtJjh99QA6YSF0Izg/1/kdee228E4brYLYO2z6I/EGYK6y0Dqzba7MbgZziI/XJTUfqKRsH69E6wXi79ojR9/8hG//pwi0K/jJJm2CYzdeOfUjn/qlevInEu5QYLCFz4CuatTBdK9JqnX5A5hTNUX+WNz1X37rpuTraqJH5kTqRroHwGntE1/nfSgOOi5OWHIaZwEuaDr6m849bsN1aGD+QwWLt/7JUa2CNsPrXGNKcw9HeYN/Y/igxRVrTeRaisH27CPQ8Sa+MvkEX9R3hGL9+lYy/vUJP/P4H5O/wwWiNYkBr//0ytwbuFzIH2H7+f0ZFbaHWosPbKU1hG+ujxKaFhyWkNCT4ZxldwKk/FMHkS8pU6n3YVipZyFlTA/ct/k/ZHg7kFBwOxQraVOOCQyEqBKx8JpXP2ubX2Tze9TDM7hVm9F4YAlaAM605wormxLTl4sAQ9oK2YCzdMP9gkApA/qGgkHCu66XOL7+JZxxdjQHuAathuBqGUNSa2KJbvzB4iPwDtTHZ9EAt5R2sFQznafJY8XNWmR8I0ve7y8mM3I1N71EKrOgqmK4SnM9G7ob5ik83TwcPkbe/NgbIfiAg8vYHpMochvb9Kk9T076VLr+B5xxZxabQu+ZhRe6Kfbxc8+zAIM/YW2F+W/wYxi86Xs4ns28ljL4oMSMrBNdmBPStDGe+758n+G7khv3GhrCfNrT6Re6zPsF5btgn6+q2zTBZobmTzF4QuTNp9q5s/fj1z7H17QKD5Kz/9bYWDNCFAaLQJKCTp/A7PXJHItX7hZFU7wpjtu+OluVvbLP9F5lmWAkTeM7rAAAAAElFTkSuQmCC" InformativeScreenshot="d2c3a2739be8e75efcbdd96ed7a93df1.png" Selector="&lt;html app='chrome.exe' title='Novo separador' /&gt;" Title="Novo separador" Url="chrome://newtab/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
